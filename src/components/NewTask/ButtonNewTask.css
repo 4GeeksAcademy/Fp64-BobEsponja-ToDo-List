@@ -1,0 +1,15 @@
+#addTaskButton {
+    background-color: #4CAF50; /* Color de fondo verde */
+    color: white; /* Texto en color blanco */
+    padding: 10px 20px; /* Espaciado interior para hacer el botón más grande */
+    border: none; /* No mostrar bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño del texto */
+    cursor: pointer; /* Cursor en forma de mano al pasar el mouse */
+    transition: background-color 0.3s, transform 0.3s; /* Transición suave para efectos */
+}
+
+#addTaskButton:hover {
+    background-color: #45a049; /* Cambiar el color al pasar el mouse */
+    transform: scale(1.05); /* Efecto de crecimiento al pasar el mouse */
+}

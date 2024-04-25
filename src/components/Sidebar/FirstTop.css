@@ -1,0 +1,37 @@
+.lupa{
+    font-size: 20px;
+}
+
+.firstTop{
+    margin-top: -45px;
+}
+
+
+#search{
+    margin-top: -80px;
+    border-radius: 10px;
+    height: 30px;
+
+}
+
+.categories{
+    font-size: 25px;
+    color: grey;
+    margin-left: 15px;
+    line-height: 7rem;
+
+}
+
+.sidebarcategories{
+    padding: 15px;
+    line-height: 40px;
+}
+
+.logo{
+    height: 16em;
+    margin-left: 25px;
+}
+
+.sidebar{
+    height: 90vh;
+}

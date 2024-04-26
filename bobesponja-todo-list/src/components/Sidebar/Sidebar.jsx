@@ -6,11 +6,12 @@ import FirstTop from './FirstTop';
 
 
 
+
 export default function Sidebar() {
-    const [myday, setMyDay] = useState("")
-    const [important, setImportant] = useState("");
-    const [personal, setPersonal] = useState("");
-    const [all, setAll] = useState("")
+    // const [myday, setMyDay] = useState("")
+    // const [important, setImportant] = useState("");
+    // const [personal, setPersonal] = useState("");
+    // const [all, setAll] = useState("")
 
 
 

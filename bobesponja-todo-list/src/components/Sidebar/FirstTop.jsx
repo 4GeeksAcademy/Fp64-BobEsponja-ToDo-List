@@ -4,11 +4,10 @@ import { useState } from 'react'
 import Logo from '../../assets/Logo.svg'
 
 
-export default function FirstTop({ categorias }) {
+export default function FirstTop({ categorias, setFilteredTaskListState, setFilteredTaskCategoryState}) {
   const [inputState, setInputState] = useState('')
   const [taskListState, setTaskListState] = useState([]);
-  const [filteredTaskListState, setFilteredTaskListState] = useState([]);
-  const [filteredTaskCategoryState, setFilteredTaskCategoryState] = useState([]);
+ 
 
 
   useEffect(() => {

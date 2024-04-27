@@ -1,38 +1,22 @@
-import React from 'react'
 import './FirstTop.css'
-import { useState } from 'react'
-import Sponge from '../../assets/Sponge.svg'
+import {useState} from 'react'
 
 
 export default function FirstTop() {
 
-    const [tasks, setTasks] = useState([]);
-    const [search, setSearch] = useState("");
-  
-    const addTask = task => {
-      if (task) {
-        setTasks([...tasks, task]);
-      }
-    };
-  
-    const handleSearch = event => {
-      setSearch(event.target.value);
-    };
-  
-    const filteredTasks = tasks.filter(task =>
-      task.toLowerCase().includes(search.toLowerCase())
-    );
-    
-  return (
-    <div>
-       <div className='firstTop'>
-       <img className="logo" src={Sponge}></img>
-         <div className='search'>
-            <span className="material-symbols-outlined lupa">search</span>
-                 <input type="text" id="search"  placeholder='Search' value={search} onChange={handleSearch}></input>
-         </div>
-         <span className='categories'>Categories</span>
+    const [searchState, setSearchState] = useState('');
+
+    return (
+        <div className='firstTop'>
+
+            {searchState === '' && <span className='Span_Search'>Search Category: </span>} <br/>
+
+            {searchState !== '' && <span className='Span_Categories'>Categories: </span>} <br/>
+
+            <input type="text" placeholder='Search' value={searchState} onChange={(e) => {
+                setSearchState(e.target.value);
+            }}/>
         </div>
-    </div>
-  )
+
+    )
 }

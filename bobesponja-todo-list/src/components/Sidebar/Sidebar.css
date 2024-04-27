@@ -1,86 +1,69 @@
-#root{
-    margin: unset;
-    height: 90vh;
-    text-align: unset;
-    padding-left: 20px;
-    padding-top: 0px;
-    
+:root {
+    --backgroundSideBar: #404040;
+}
+
+
+.Container {
+    background: var(--backgroundSideBar);
+    border-radius: .15rem;
+    padding: 1.5rem;
+    max-width: 20rem;
+    min-height: 50vh;
+    color: white;
+}
+
+.Category {
+    gap: 2.5rem;
+}
+
+.sideBarCategories {
+    height: 100%;
+    width: 100%;
+}
+
+.Categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2.5rem;
+}
+
+.Categories li {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    border-radius: .15rem;
+    padding: 1px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.Categories li a {
+    background: var(--backgroundSideBar);
+    background-size: 10% 10%;
+}
+
+.Categories li a::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(90deg, #000f49, #030380, #00fff7);
+    transition: 800ms;
+    z-index: -1;
+}
+
+.Categories li a:hover::before {
+    content: '';
+    inset: 0 -3px;
+    animation: Rotate 1s ease-in-out forwards;
+
+}
+
+@keyframes Rotate {
+    from {
+        transform: rotate(90deg);
     }
-    
-    .container{
-        height: 80vh;
-        margin-top: 10px;
-        display: flex;
+    to {
+        transform: rotate(360deg)translateY(90%) translateX(-2%);
     }
-    
-    
-    .material-symbols-outlined {
-      font-variation-settings:
-      'FILL' 0,
-      'wght' 400,
-      'GRAD' 0,
-      'opsz' 24;
-      font-size: 25px;
-      
-    }
-    
-    
-    a {
-       
-        margin: 10px 15px;
-        font-size: 23px;
-        background-image: linear-gradient(90deg, #020024,#090979, #00d4ff ) ;
-        text-decoration: none;
-        font-weight: 600;
-        cursor: pointer;
-        background-repeat: no-repeat;
-        background-size: 0% 2px;
-        background-position: left bottom;
-        transition: background-size 700ms ease-in-out;
-        
-    }
-    
-    
-    
-    a:hover{
-        background-size: 100% 2px;
-    }
-    
-    
-    .sidebar{
-        background-color: #a9a5a8;
-        width: 350px;
-    }
-    
-    
-    
-    .status{
-        border-radius: 6px;
-        border: 2px solid grey;
-        width: 25px;
-        height: 25px;
-    }
-    
-    .mydaydiv,.personaldiv,.importantdiv,.alldiv{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        
-    }
-    
-    .myday{
-        margin-left: 114px
-    }
-    
-    .important{
-        margin-left: 87px;
-    }
-    
-    .personal{
-        margin-left: 104px;
-    }
-    
-    .all{
-        margin-left: 166px;
-    }
+}

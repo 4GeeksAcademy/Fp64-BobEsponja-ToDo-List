@@ -1,37 +1,27 @@
-.lupa{
-    font-size: 20px;
+.firstTop {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: .5rem;
+    margin-bottom: 2.5rem;
 }
 
-.firstTop{
-    margin-top: -45px;
+.Span_Categories {
+    color: dimgray;
+    animation: appear 500ms ease forwards;
 }
 
-
-#search{
-    margin-top: -80px;
-    border-radius: 10px;
-    height: 30px;
-
+input[type='text'] {
+    border-radius: .15rem;
+    width: 15rem;
+    color: silver;
 }
 
-.categories{
-    font-size: 25px;
-    color: grey;
-    margin-left: 15px;
-    line-height: 7rem;
-
-}
-
-.sidebarcategories{
-    padding: 15px;
-    line-height: 40px;
-}
-
-.logo{
-    height: 16em;
-    margin-left: 25px;
-}
-
-.sidebar{
-    height: 90vh;
+@keyframes appear {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }

@@ -4,12 +4,15 @@ import { useState } from 'react'
 import Logo from '../../assets/Logo.svg'
 
 
-export default function FirstTop({ categorias, setFilteredTaskListState, setFilteredTaskCategoryState}) {
+
+
+const FirstTop = ({ categorias}) => {
+
   const [inputState, setInputState] = useState('')
   const [taskListState, setTaskListState] = useState([]);
+  const [filteredTaskListState, setFilteredTaskListState] = useState('')
+  const [filteredTaskCategoryState, setFilteredTaskCategoryState] = useState([])
  
-
-
   useEffect(() => {
         setTaskListState([]);
       },[]);
@@ -23,8 +26,9 @@ export default function FirstTop({ categorias, setFilteredTaskListState, setFilt
     setFilteredTaskCategoryState(taskListState.filter((task) => { return task.categoria.toLowerCase().includes(categorias.toLowerCase())}))
   },[taskListState, categorias ])
 
+
   return (
-    <div>
+      <>
        <div className='firstTop'>
        <img className="logo" src={Logo}></img>
          <div className='search'>
@@ -33,6 +37,11 @@ export default function FirstTop({ categorias, setFilteredTaskListState, setFilt
          </div>
          <span className='categories'>Categories</span>
         </div>
-    </div>
+        </>
   )
 }
+
+export default FirstTop
+
+
+

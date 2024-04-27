@@ -20,7 +20,6 @@ export default function FirstTop({ categorias }) {
   },[taskListState, inputState ])
 
   useEffect( () => {
-    // console.log(taskListState)
     categorias === '' ? setFilteredTaskCategoryState(taskListState) : 
     setFilteredTaskCategoryState(taskListState.filter((task) => { return task.categoria.toLowerCase().includes(categorias.toLowerCase())}))
   },[taskListState, categorias ])

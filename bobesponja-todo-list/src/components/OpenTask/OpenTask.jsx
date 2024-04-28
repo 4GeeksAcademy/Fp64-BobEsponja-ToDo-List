@@ -13,7 +13,7 @@ const OpenTask = () => {
     
       return (
         <div className='app'>
-          {showModal && <Modal setShowModal={setShowModal} />}
+          {showModal && <Modal setShowModal={setShowModal}  />}
          <button onClick={openModal} className='open-btn'>Open Modal</button>
         </div>
       )

@@ -1,13 +1,14 @@
 import React from 'react'
 import { useState } from 'react'
 
-    const NewTask = ({ addTask }) => {
+    const NewTask = ({ setTask }) => {
     const [newTaskName, setNewTaskName] = useState('');
     const [newTaskCategory, setNewTaskCategory] = useState('');
     
 
     const addNewTask = () => {
-        addTask({ name: newTaskName, category: newTaskCategory });
+        console.log(setTask)
+        setTask({ name: newTaskName, category: newTaskCategory });
         setNewTaskName('');
         setNewTaskCategory('');
     };

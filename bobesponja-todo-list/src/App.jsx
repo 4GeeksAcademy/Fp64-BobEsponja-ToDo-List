@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Sidebar from './components/Sidebar/Sidebar'
 import ToDoList from './components/TodoList/TodoList'
+import OpenTask from './components/OpenTask/OpenTask'
+import NewTask from './components/NewTask/NewTask'
 
 function App() {
   
@@ -23,6 +23,7 @@ function App() {
       
       </div>
     </>
+    
   )
 }
 

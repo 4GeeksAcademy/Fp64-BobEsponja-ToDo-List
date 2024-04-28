@@ -1,0 +1,198 @@
+.modal {
+  position: absolute;
+  width: 100%;
+  max-width: 500px;
+  height: 325px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  /* opacity: 0.5;
+    transform: translateY(-100vh);
+    transition: all 0.5 cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+}
+
+
+/* .showModal {
+    opacity: 1;
+     transform: translateY(0);
+} */
+
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.closeBtn span {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.closeBtn span:hover {
+  transform: scale(1.2);
+}
+
+h1 {
+  position: absolute;
+  margin-top: -274px;
+  color: white;
+}
+
+
+.modalBody {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -1px;
+  margin-left: 0rem;
+  background: rgb(116, 119, 136);
+  background: radial-gradient(circle, rgba(116, 119, 136, 1) 0%, rgba(8, 8, 8, 1) 100%);
+  border-radius: 7px;
+  opacity: 3;
+}
+
+input[type=text] {
+  position: absolute;
+  width: 81%;
+  padding: 7px 20px;
+  margin: 8px 5px;
+  display: block;
+  border: 0px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: -12rem;
+  margin-top: -4rem;
+  padding-right: 7rem;
+  background: transparent;
+}
+
+select {
+  position: absolute;
+  width: 41%;
+  padding: 7px 20px;
+  margin: 8px 5px;
+  display: block;
+  border: 0px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: -12rem;
+  margin-top: 2rem;
+  padding-right: 7rem;
+  background: transparent;
+}
+
+input,
+select,
+textarea {
+  color: white;
+}
+
+textarea:focus,
+input:focus {
+  color: white;
+}
+
+span {
+  color: white;
+}
+
+/* .createTask {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  } */
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.category {
+  margin-left: -8rem;
+  color: white;
+  position: absolute;
+  margin-left: -13rem;
+}
+
+.task {
+  position: absolute;
+  margin-top: -6rem;
+  margin-left: -13rem;
+  color: white;
+}
+
+.createTask-btn {
+  position: absolute;
+  background-color: #d42020;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 43px;
+  margin-top: 78px;
+  transform: translate(105px, 29px) scale(0.8);
+}
+
+.cancel-btn {
+  position: absolute;
+  background-color: #3b3838;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 25rem;
+  margin-top: 13rem;
+  transform: translate(-87px, 31px) scale(0.8);
+}
+
+option {
+  color: black;
+}
+
+.cancel-btn {
+  background-color: #31277d;
+  box-shadow: rgba(54, 62, 137, 0.2) 0 -25px 18px -14px inset,rgba(73, 44, 187, 0.15) 0 1px 2px,rgba(68, 44, 187, 0.15) 0 2px 4px,rgba(56, 44, 187, 0.15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: rgb(236, 234, 241);
+  cursor: pointer;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  text-align: center;
+  transition: all 250ms;
+  font-size: 16px;
+}
+
+.createTask-btn {
+  background-color: #941212;
+  box-shadow: rgba(54, 62, 137, 0.2) 0 -25px 18px -14px inset,rgba(73, 44, 187, 0.15) 0 1px 2px,rgba(68, 44, 187, 0.15) 0 2px 4px,rgba(56, 44, 187, 0.15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: rgb(236, 234, 241);
+  cursor: pointer;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  text-align: center;
+  transition: all 250ms;
+  font-size: 16px;
+}
+
+.cancel-btn:hover {
+  box-shadow: rgba(55, 53, 134, 0.35) 0 -25px 18px -14px inset,rgba(75, 44, 187, 0.25) 0 1px 2px,rgba(49, 55, 107, 0.25) 0 2px 4px,rgba(53, 53, 147, 0.25) 0 4px 8px,rgba(56, 44, 187, 0.25) 0 8px 16px,rgba(51, 41, 101, 0.25) 0 16px 32px;
+  transform: translate(-88px, 29px) scale(1) ;
+}
+
+.createTask-btn:hover{
+  box-shadow: rgba(55, 53, 134, 0.35) 0 -25px 18px -14px inset,rgba(75, 44, 187, 0.25) 0 1px 2px,rgba(49, 55, 107, 0.25) 0 2px 4px,rgba(53, 53, 147, 0.25) 0 4px 8px,rgba(56, 44, 187, 0.25) 0 8px 16px,rgba(51, 41, 101, 0.25) 0 16px 32px;
+  transform: translate(105px, 29px) scale(1);
+}

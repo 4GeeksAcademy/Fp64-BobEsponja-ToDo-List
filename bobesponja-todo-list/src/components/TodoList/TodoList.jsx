@@ -6,35 +6,8 @@ const ToDoList = ({listFilteredTask,listFilteredCategory,listaActual}) => {
    
 
 useEffect( () => {
-console.log(listaActual)
-console.log(listFilteredTask)
+
 },[listFilteredTask,listaActual])
-// const ToDoList = ({ tasks, addTask }) => {
-//     return (
-//         <div className='TaskManager'>
-//             <ul>
-//                 {tasks.map((task, index) => (
-//                     <li key={index}>{task.name} </li>
-//                     <li key={index}>{task.category}</li>
-
-//                 ))}
-//             </ul>
-//             <NewTask addTask={addTask} />
-//         </div>
-//     );
-// };
-
-// ListTask.propTypes = {
-//     tasks: PropTypes.arrayOf(
-//         PropTypes.shape({
-//             name: PropTypes.string.isRequired,
-//             category: PropTypes.string.isRequired,
-//         })
-//     ).isRequired,
-//     addTask: PropTypes.func.isRequired,
-// };
-
-// export default ListTask;
     
     const MappedTasksByCategoryOnList = () => {
 

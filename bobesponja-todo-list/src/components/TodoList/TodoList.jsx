@@ -17,9 +17,7 @@ useEffect( () => {
             return listFilteredCategory.map((task, index) => {
                 return (
                     <>
-                        <li className='TaskList' key={'task' + index}>{task.nombre}</li>
-                        <li className='TaskCategory' key={'cat1' + index}>{task.categoria}</li>
-                        <li className='TaskCategory' key={'cat2' + index}>{task.descripcion}</li>
+                        <li className='TaskList' key={'task' + index}>{task.nombre} {task.categoria} </li>
                     </>
                 )
             }
@@ -30,9 +28,7 @@ useEffect( () => {
         return listFilteredTask.map((task, index) => {
                 return (
                     <>
-                        <li className='TaskList' key={'task' + index}>{task.nombre}</li>
-                        <li className='TaskCategory' key={'cat1' + index}>{task.categoria}</li>
-                        <li className='TaskCategory' key={'cat2' + index}>{task.descripcion}</li>
+                        <li className='TaskList' key={'task' + index}>{task.nombre} {task.categoria} </li>
                     </>
                 )
             }

@@ -7,8 +7,7 @@ import ToDoList from './components/TodoList/TodoList'
 
 function App() {
   
-  const [tasks, setTasks] = useState([]); 
-  //ESTADO QUE TIENE QUE ACTUALIZAR EL PROP
+  const [tasks, setTasks] = useState([{}]); 
   const [FilteredTaskListState, setFilteredTaskListState] = useState(tasks)
   const [filteredTaskCategoryState, setFilteredTaskCategoryState] = useState([])
 

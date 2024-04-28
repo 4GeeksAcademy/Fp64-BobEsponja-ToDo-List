@@ -6,23 +6,22 @@ import Logo from '../../assets/Logo.svg'
 
 
 
-const FirstTop = ({ categorias}) => {
+const FirstTop = ({ categorias, setFilteredTaskListState,setFilteredTaskCategoryState,listTask, stateInput, stateInputSet}) => {
 
-  const [inputState, setInputState] = useState('')
+ 
   const [taskListState, setTaskListState] = useState([]);
-  const [filteredTaskListState, setFilteredTaskListState] = useState('')
-  const [filteredTaskCategoryState, setFilteredTaskCategoryState] = useState([])
+ 
  
   useEffect(() => {
-        setTaskListState([]);
+        setTaskListState(listTask);
       },[]);
 
   useEffect(()=>{
-    inputState === '' ? setFilteredTaskListState(taskListState) : setFilteredTaskListState(taskListState.filter((task) => { return task.nombre.toLowerCase().includes(inputState.toLowerCase())}));
-  },[taskListState, inputState ])
+    stateInput === '' ? setFilteredTaskListState(taskListState) : setFilteredTaskListState(taskListState.filter((task) => { return task.nombre.toLowerCase().includes(stateInput.toLowerCase())}));
+  },[taskListState, stateInput ])
 
   useEffect( () => {
-    categorias === '' ? setFilteredTaskCategoryState(taskListState) : 
+    categorias === '' ? setFilteredTaskCategoryState([]) : 
     setFilteredTaskCategoryState(taskListState.filter((task) => { return task.categoria.toLowerCase().includes(categorias.toLowerCase())}))
   },[taskListState, categorias ])
 
@@ -33,7 +32,7 @@ const FirstTop = ({ categorias}) => {
        <img className="logo" src={Logo}></img>
          <div className='search'>
             <span className="material-symbols-outlined lupa">search</span>
-                 <input type="text" id="search"  placeholder='Search' onChange={event => setInputState(event.target.value)} value={inputState} ></input>
+                 <input type="text" id="search"  placeholder='Search' onChange={event => stateInputSet(event.target.value)} value={stateInput} ></input>
          </div>
          <span className='categories'>Categories</span>
         </div>

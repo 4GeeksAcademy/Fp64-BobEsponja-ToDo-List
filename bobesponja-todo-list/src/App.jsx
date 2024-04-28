@@ -1,15 +1,28 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Sidebar from './components/Sidebar/Sidebar'
+import ToDoList from './components/TodoList/TodoList'
 
 function App() {
-  // const [count, setCount] = useState(0)
+  
+  const [tasks, setTasks] = useState([]); 
+  //ESTADO QUE TIENE QUE ACTUALIZAR EL PROP
+  const [FilteredTaskListState, setFilteredTaskListState] = useState(tasks)
+  const [filteredTaskCategoryState, setFilteredTaskCategoryState] = useState([])
+
+
+
+ 
 
   return (
     <>
-      <Sidebar></Sidebar>
+   <div className='container'> 
+      <Sidebar setFilteredList={setFilteredTaskListState} setFilteredCategoy={setFilteredTaskCategoryState} taskList={tasks}></Sidebar>
+      <ToDoList listFilteredTask={FilteredTaskListState} listFilteredCategory={filteredTaskCategoryState}></ToDoList>
+      
+      </div>
     </>
   )
 }

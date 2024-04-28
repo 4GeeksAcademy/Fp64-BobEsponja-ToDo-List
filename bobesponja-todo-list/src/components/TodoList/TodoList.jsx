@@ -1,45 +1,43 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import './TodoList.css';
 import FirstTop from "../Sidebar/FirstTop.jsx";
 
-const ToDoList = ({setFilteredTaskListState, setFilteredTaskCategoryState}) => {
-    const [tasks, setTasks] = useState([{name: '', category: ''}])
+const ToDoList = ({listFilteredTask,listFilteredCategory}) => {
+   
 
+useEffect( () => {
+
+    
+},[listFilteredTask])
+    
     const MappedTasksByCategoryOnList = () => {
-        return tasks.map((task, index) => {
+
+        if(listFilteredCategory.length){
+            
+            return listFilteredCategory.map((task, index) => {
                 return (
                     <>
-                        <li className='TaskList' key={'task' + index}>{task.name}</li>
-                        <li className='TaskCategory' key={'cat' + index}>{task.category}</li>
+                        <li className='TaskList' key={'task' + index}>{task.nombre}</li>
+                        <li className='TaskCategory' key={'cat1' + index}>{task.categoria}</li>
+                        <li className='TaskCategory' key={'cat2' + index}>{task.descripcion}</li>
                     </>
                 )
             }
         )
+        }else {
+           
+            
+        return listFilteredTask.map((task, index) => {
+                return (
+                    <>
+                        <li className='TaskList' key={'task' + index}>{task.nombre}</li>
+                        <li className='TaskCategory' key={'cat1' + index}>{task.categoria}</li>
+                        <li className='TaskCategory' key={'cat2' + index}>{task.descripcion}</li>
+                    </>
+                )
+            }
+        )}
     }
-
-
-    // setFilteredTaskCategoryState:
-
-
-    export function filteredTasksByCategoryOnList() {
-        return tasks.category === '' ? setFilteredTaskCategoryState(tasks) : setFilteredTaskCategoryState(tasks.filter((task) => {
-                return task.category.toLowerCase().includes(task.category.toLowerCase());
-            }));
-    }
-
-
-    // setFilteredTaskListState:
-
-    export function filteredTaskListState() {
-        return tasks.name === '' ? setFilteredTaskListState(tasks) : setFilteredTaskListState(tasks.filter((task) => {
-            return task.name.toLowerCase().includes(task.category.toLowerCase());
-        }));
-    }
-
-
-    // const getNewTask = (newTask) => {
-    //     setTasks([...tasks, newTask])
-    // }
 
     return (
         <>
@@ -54,4 +52,4 @@ const ToDoList = ({setFilteredTaskListState, setFilteredTaskCategoryState}) => {
 }
 
 
-export default <ToDoList filteredTaskListState={filteredTaskListState} setFilteredTaskCategoryState={filteredTasksByCategoryOnList}/>;
+export default ToDoList

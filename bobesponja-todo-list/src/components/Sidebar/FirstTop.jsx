@@ -11,10 +11,11 @@ const FirstTop = ({ categorias, setFilteredTaskListState,setFilteredTaskCategory
  
   const [taskListState, setTaskListState] = useState([]);
  
- 
+
   useEffect(() => {
         setTaskListState(listTask);
-      },[]);
+        console.log(listTask)
+      },[listTask]);
 
   useEffect(()=>{
     stateInput === '' ? setFilteredTaskListState(taskListState) : setFilteredTaskListState(taskListState.filter((task) => { return task.nombre.toLowerCase().includes(stateInput.toLowerCase())}));

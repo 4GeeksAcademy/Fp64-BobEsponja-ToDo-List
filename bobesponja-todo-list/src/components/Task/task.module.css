@@ -42,13 +42,16 @@
     border: 2px solid #309847;
     margin-left: 4px;
     margin-top: 0px;
-    margin-right: -5px;
+    margin-right: -8px;
   }
   
   .checkContainer svg {
     width: 100%;
     height: 100%;
     color: #00ff00;
+    margin-left: 4px;
+    margin-top: 0px;
+    margin-right: -8px;
   }
   
   .deleteButton {

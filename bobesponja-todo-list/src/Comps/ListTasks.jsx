@@ -1,9 +1,11 @@
 import './ListTask.css'
 import Tasks from "./Tasks.jsx";
+import DeleteIcon from '@mui/icons-material/Delete';
+import Divider from "@mui/material/Divider";
 
-const ListTasks = ({ list, setList }) => {
+const ListTasks = ({list, setList}) => {
     const changeStatus = (e) => {
-        const { name, checked } = e.target;
+        const {name, checked} = e.target;
         const newList = list.map((item) => ({
             ...item,
             done: item.id === name ? checked : item.done
@@ -11,7 +13,7 @@ const ListTasks = ({ list, setList }) => {
         setList(newList);
     }
 
-    const Add = list.map(item => <Tasks key={item.id} data={item} onChange={changeStatus} />);
+    const Add = list.map(item => <Tasks className='Tasks' key={item.id} data={item} onChange={changeStatus}/>);
 
     const Remove = () => {
         const newList = list.filter(item => !item.done);
@@ -19,12 +21,16 @@ const ListTasks = ({ list, setList }) => {
     }
 
     return (
-        <div className='Task_List'>
-            {list.length ? Add : ''}
-            {list.length ? (
-                <button className='Cancel' onClick={Remove}>Remove</button>
-            ) : null}
-        </div>
+        <>
+            <div className='Task_List'>
+                {/* eslint-disable-next-line react/prop-types */}
+                {list.length ? Add : ''}
+                {list.length ? (
+                    <button className='Remove' onClick={Remove}><DeleteIcon/></button>
+                ) : null}
+            </div>
+            <Divider/>
+        </>
     )
 }
 

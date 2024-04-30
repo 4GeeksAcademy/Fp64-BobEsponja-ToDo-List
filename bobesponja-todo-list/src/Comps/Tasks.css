@@ -1,23 +1,31 @@
+
 .Tasks_Management {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    width: 75%;
     gap: .5rem;
+    margin-top: .5rem;
 
     & .Item {
-       & input[type='checkbox'] {
-           width: 5rem;
-       }
+        & input[type='checkbox'] {
+            width: 5rem;
+        }
     }
 
     & .Tasks {
-        border: 3px solid dodgerblue;
-        padding: .5rem;
+        display: inline-flex;
+        justify-content: space-around;
+        height: 2rem;
+        width: 100%;
+        border: 3px solid lightgray;
+        border-radius: .25rem;
         color: black;
         font-size: large;
         font-weight: bold;
-        border-radius: .5rem;
+
+        & .Task_Name {
+
+        }
     }
+
 
 }

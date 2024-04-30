@@ -1,10 +1,11 @@
 button,
-.Close_Icon {
+.Close___Icon {
     cursor: pointer;
 }
 
-.Modal_Container {
-    background-color: #222222;
+
+.Modal___Container {
+    background-color: #3a3a3a;
     display: flex;
     flex-direction: column !important;
     justify-content: center;
@@ -18,29 +19,28 @@ button,
     backdrop-filter: blur(1.17rem);
     position: fixed;
 
-    & .Close_Icon {
+    & .Close___Icon {
         position: absolute;
         top: 5%;
         right: 5%;
     }
 
-    & .Modal_Title {
+    & .Modal___Title {
         font-size: xxx-large;
         text-align: center;
         font-family: Arial, sans-serif;
         font-weight: bolder;
         -webkit-text-fill-color: whitesmoke;
-        -webkit-animation: ColorTransition 2s infinite alternate;
+        -webkit-animation: ColorTransition 2s infinite alternate !important;
     }
 
-    & .Modal_Input {
+    & .Modal___Input {
         width: 100%;
         display: flex;
         justify-content: space-around;
         align-items: center;
         gap: .5rem;
-
-        & .Modal__Assets {
+        & .Modal___Assets {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -48,22 +48,22 @@ button,
             height: 100%;
             gap: 2.5rem;
 
-            & .Individual_Input {
+            & .Individual___Input {
                 display: flex;
                 flex-direction: column;
                 gap: 1rem;
-
-                input {
-                    border: white;
+                input[type='text'] {
                     width: 100%;
-                    color: black;
                     padding: .5rem;
-                    text-decoration: none;
+                    background-color: lightgray;
                     border-radius: .25rem;
+                    border: none;
+                    outline: none;
+                    color: black;
                 }
             }
 
-            & .Modal_Button {
+            & .Modal___Button {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -80,7 +80,6 @@ button,
                     border: 1px solid black;
 
                     &:hover {
-
                         background-color: #813a3a;
                         transform: scale(1.1);
                         transition: 250ms ease
@@ -110,11 +109,12 @@ button,
 
 }
 
-.Modal_Appear {
+
+.Modal___Appear {
     animation: Appear 250ms linear forwards;
 }
 
-.Modal_Disappear {
+.Modal___Disappear {
     animation: Disappear 250ms linear forwards;
 }
 

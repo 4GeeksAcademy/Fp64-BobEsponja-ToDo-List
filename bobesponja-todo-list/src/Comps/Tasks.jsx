@@ -1,14 +1,23 @@
-
-
+import Checkbox from '@mui/material/Checkbox';
+import Divider from '@mui/material/Divider';
 import './Tasks.css'
 const Tasks = ({ onChange, data: { id, done, task, category } }) => {
     return (
-        <section className='Tasks_Management'>
-            <label className='Item'>
-                <input type="checkbox" name={id} defaultChecked={done} onChange={onChange}/>
-            </label>
-            <div className="Tasks">{task} {category}</div>
-        </section>
+        <>
+            <section className='Tasks_Management'>
+                <section className="Checked">
+                    <label className='Item'>
+                        <Checkbox name={id} defaultChecked={done} onChange={onChange}/>
+                    </label>
+                </section>
+                <section className="Tasks">
+                    <span className="Task_Name">{task}</span>
+                    <span className="Task_Category">{category}</span>
+                </section>
+            </section>
+
+        </>
+
     )
 }
 

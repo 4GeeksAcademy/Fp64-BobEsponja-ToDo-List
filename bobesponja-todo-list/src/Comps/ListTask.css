@@ -1,0 +1,9 @@
+.Task_List {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 1.5rem;
+    width: 85vh;
+    height: 60vh;
+    text-align: center;
+    overflow: hidden;
+}

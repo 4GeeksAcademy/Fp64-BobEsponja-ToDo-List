@@ -1,0 +1,160 @@
+button,
+.Close_Icon {
+    cursor: pointer;
+}
+
+.Modal_Container {
+    background-color: #222222;
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+    width: 40rem;
+    height: 25rem;
+    border: 1px solid #000;
+    border-radius: 5%;
+    box-shadow: 0 0 .15rem #fff, 0 0 .15rem #fff, 0 0 .15rem #fff, 0 0 .5rem #fff;
+    gap: 2.5rem;
+    backdrop-filter: blur(1.17rem);
+    position: fixed;
+
+    & .Close_Icon {
+        position: absolute;
+        top: 5%;
+        right: 5%;
+    }
+
+    & .Modal_Title {
+        font-size: xxx-large;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        font-weight: bolder;
+        -webkit-text-fill-color: whitesmoke;
+        -webkit-animation: ColorTransition 2s infinite alternate;
+    }
+
+    & .Modal_Input {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: .5rem;
+
+        & .Modal__Assets {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            gap: 2.5rem;
+
+            & .Individual_Input {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                input {
+                    border: white;
+                    width: 100%;
+                    color: black;
+                    padding: .5rem;
+                    text-decoration: none;
+                    border-radius: .25rem;
+                }
+            }
+
+            & .Modal_Button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5rem;
+                width: 100%;
+
+                & .Cancel {
+                    background-color: #4e4e4e;
+                    border-radius: .5rem;
+                    color: white;
+                    font-size: medium;
+                    width: 4.5rem;
+                    height: 2rem;
+                    border: 1px solid black;
+
+                    &:hover {
+
+                        background-color: #813a3a;
+                        transform: scale(1.1);
+                        transition: 250ms ease
+                    }
+                }
+
+                & .Submit {
+                    background-color: #58cf58;
+                    width: 4.5rem;
+                    height: 2rem;
+                    border-radius: .5rem;
+                    color: white;
+                    font-size: medium;
+                    border: 1px solid black;
+
+                    &:hover {
+                        transform: scale(1.1);
+                        transition: 250ms ease
+                    }
+
+                }
+            }
+
+        }
+
+    }
+
+}
+
+.Modal_Appear {
+    animation: Appear 250ms linear forwards;
+}
+
+.Modal_Disappear {
+    animation: Disappear 250ms linear forwards;
+}
+
+
+@keyframes Appear {
+    0% {
+        transform: translateY(100%) scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(50%) scaleX(25%) scaleY(50%);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+        z-index: 2;
+    }
+}
+
+
+@keyframes Disappear {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+        z-index: 2;
+    }
+    50% {
+        transform: translateY(50%) scaleX(25%) scaleY(50%);
+    }
+    100% {
+        transform: translateY(100%) scale(0);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes ColorTransition {
+    0% {
+        -webkit-text-fill-color: blueviolet;
+    }
+    100% {
+        -webkit-text-fill-color: white;
+    }
+}

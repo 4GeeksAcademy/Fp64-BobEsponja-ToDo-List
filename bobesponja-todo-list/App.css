@@ -1,0 +1,35 @@
+.Init_Task {
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    background-color: #4e4e4e;
+    border-radius: .5rem;
+    width: 4.5rem;
+    height: 2.5rem;
+
+}
+
+.Task_Appear{
+    animation: Show 250ms ease forwards;
+}
+.Task_Disappear {
+    animation: Hide 250ms ease forwards;
+}
+
+@keyframes Hide {
+    from {
+        opacity: 1
+    }
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes Show {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}

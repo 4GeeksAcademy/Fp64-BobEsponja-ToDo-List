@@ -22,16 +22,16 @@ export function Header({ handleAddTask }) {
       <h1> &gt;_ To Do List...</h1>
       <img src={pawned} />
 
-        <a className='adding' href="#dialog"><button>Add Task</button></a>
+      <a className='adding' href="#dialog"><button>Add Task</button></a>
 
       <dialog id="dialog" onSubmit={handleSubmit} className={styles.newTaskForm}>
         <form>
-      <input class="text" placeholder="Add a new task" type="text" onChange={onChangeTitle} value={title} autofocus/>
-        <button className='create-btn'>Create <AiOutlinePlusCircle size={20} /></button>
+          <input class="text" placeholder="Add a new task" type="text" onChange={onChangeTitle} value={title} autofocus />
+          <button className='create-btn'>Create <AiOutlinePlusCircle size={20} /></button>
         </form>
         <a className='close-btn' href="#!">Close</a>
       </dialog>
-      
+
 
     </header>
   )

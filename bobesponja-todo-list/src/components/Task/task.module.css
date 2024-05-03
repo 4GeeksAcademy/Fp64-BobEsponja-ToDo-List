@@ -1,0 +1,63 @@
+.task {
+    width: 100%;
+    background: #262626;
+    border: 1px solid #333333;
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  
+  .task p {
+    font-size: 14px;
+    line-height: 19px;
+    color: #F2F2F2;
+    margin-left: 15px;
+    font-family: 'Terminal', sans-serif;
+  }
+  
+  p.textCompleted {
+    color: #808080;
+    text-decoration: line-through;
+    
+  }
+  
+  .checkContainer {
+    width: 18px;
+    height: 18px;
+    background: none;
+    border: none;
+    margin-left: -2rem;
+    height: 16px;
+    width: 48px;
+    margin-top: -1px;
+  }
+  
+  .checkContainer div {
+    width: 100%;
+    height: 100%;
+    border-radius: 999px;
+    border: 2px solid #309847;
+    margin-left: 4px;
+    margin-top: 0px;
+    margin-right: -8px;
+  }
+  
+  .checkContainer svg {
+    width: 100%;
+    height: 100%;
+    color: #00ff00;
+    margin-left: 4px;
+    margin-top: 0px;
+    margin-right: -8px;
+  }
+  
+  .deleteButton {
+    background: none;
+    border: none;
+    color: #808080;
+    margin-left: 42rem;
+    margin-top: 1px;
+  }
